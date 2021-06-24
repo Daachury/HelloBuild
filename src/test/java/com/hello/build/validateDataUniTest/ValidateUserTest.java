@@ -4,7 +4,7 @@ import com.hello.build.controller.UserController;
 import com.hello.build.model.User;
 import com.hello.build.repository.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -29,13 +29,14 @@ public class ValidateUserTest {
         MockitoAnnotations.initMocks(this);
     }
 
+    //TODO: checking
     @Test
     public void validateUserExist(){
         Long id= 1L;
         String name= "Daniel";
         String apellido = "Achury";
-        User mockUser = User.builder().id(id).name(name).apellido(name).build();
-        Mockito.when(userController.getfindUser(id)).thenReturn(mockUser);
+        User mockUser = User.builder().id(id).name(name).apellido(apellido).build();
+        //Mockito.when(userController.getfindUser(id)).thenReturn(mockUser);
 
     }
 
